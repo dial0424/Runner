@@ -1,5 +1,7 @@
 public class iGUI : MonoBehaviour
 {
+	//shader와 관련없는 코드 생략
+
 	public void drawImage(Texture tex, float x, float y, float sx, float sy, int anc, int xyz, float degree, int reverse, 
 				float tx = 0f, float ty = 0f, float tw = 1f, float th = 1f)
 	{
