@@ -3,8 +3,6 @@ public class Loby : nGUI	//nGUI는 iGUI 상속받음
 	RenderTexture rt;
 	public override void load()
 	{
-		rt = new RenderTexture(MainCamera.devWidth, MainCamera.devHeight, 32, RenderTextureFormat.ARGB32);
-
 		//shader와 관련없는 코드 생략
 		//다른 요소들 load
 
@@ -13,16 +11,8 @@ public class Loby : nGUI	//nGUI는 iGUI 상속받음
 	
 	public override void draw(float dt)
 	{
-		RenderTexture backUp = RenderTexture.active;
-		RenderTexture.active = rt;
-		GL.Clear(true, true, Color.clear);
-
 		//shader와 관련없는 코드 생략
 		//다른 요소들 draw
-
-		RenderTexture.active = backUp;
-
-		drawImage(rt, 0, 0, TOP | LEFT);
 
 		drawPopOpt(dt);
 	}
